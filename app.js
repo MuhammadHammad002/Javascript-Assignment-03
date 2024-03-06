@@ -168,6 +168,99 @@ if (operation === "+") {
   alert("Invalid operation. Please enter one of the following: +, -, *, /, %");
 }
 
+// Chap 12-13 
+
+// Q1
+// var input = prompt("Enter a character (number or string)");
+// if (!isNaN(input)) {
+//   alert("The input is a number.");
+// }
+// // Check if the input is an uppercase letter
+// else if (input >= 'A' && input <= 'Z') {
+//   alert("The input is an uppercase letter.");
+// }
+// // Check if the input is a lowercase letter
+// else if (input >= 'a' && input <= 'z') {
+//   alert("The input is a lowercase letter.");
+// }
+// // If the input is none of the above
+// else {
+//   alert("The input is neither a number nor a letter.");
+// }
+
+// Q2
+
+// var number1 = +prompt("Enter the first integer:")
+// var number2 = +prompt("Enter the second integer:")
+// if (number1 > number2) {
+//   alert(" number 1 is larger than number 2");
+// } else if (number2 > number1) {
+//   alert(" number 2 is larger than number 1");
+// } else {
+//   alert("Both integers are equal.");
+// }
+
+// Q3
+//  var input = +prompt("Enter the number:")
+//  if (input === 0) {
+//   alert("Number is zero");
+// } else if (input < 0 ) {
+//   alert("Number is negative");
+// }  else if (input > 0) {
+//     alert("Number is positive");
+// }  else {
+//   alert("This input is not a number");
+// }
+
+// Q4
+// var character = prompt("Enter a character:");
+// if (character === "a" || character === "e" || character === "i" || character === "o" || character === "u") {
+//     alert("true");
+//  } else {
+//   alert("false");
+// }
+
+// Q5
+// var input = prompt ("Enter your password :");
+// var password = "Password123";
+// if (input === "") {
+//     alert("Please enter your password");
+// } else if (input === password) {
+//     alert("Correct");
+// }  else {
+//     alert("Incorrect password");
+// }
+
+// Q6
+// var greeting;
+// var hour = 13;
+// if (hour < 18) {
+//   greeting = "Good day";
+// } else {
+//   greeting = "Good evening";
+// }
+
+// Q7
+// Take input from the user
+var time = +prompt("Enter the time in 24-hour clock format (e.g., 1900 for 7pm):");
+if (time >= 0 && time <= 2359) {
+    var hours = Math.floor(time / 100);
+    var minutes = time % 100;
+
+
+    var period = (hours >= 12) ? "pm" : "am";
+    if (hours > 12) {
+        hours -= 12;
+    } else if (hours === 0) {
+        hours = 12;
+    }
+
+    // Display the converted time
+    alert(`The time in 12-hour clock format is: ${hours}:${minutes < 10 ? '0' : ''}${minutes} ${period}`);
+} else {
+    alert("Invalid input. Please enter a time in 24-hour clock format (between 0 and 2359).");
+}
+
 
 
 
